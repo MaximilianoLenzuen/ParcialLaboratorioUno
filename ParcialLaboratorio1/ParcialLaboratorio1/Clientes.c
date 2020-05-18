@@ -10,7 +10,7 @@ void HardcodeClientes(eCliente cliente[],int tam){
     char localidad[5][20]={{"Echeverria"},{"Longchamps"},{"Devoto"},{"Glew"},{"Guernica"}};
     char telefono[5][30]={{"1526459985"},{"42330556"},{"1526458888"},{"124597853"},{"1564979785"}};
     int edad[5]={18,52,23,30,29};
-    char sexo[5]={'F','M','F','M','M'};
+    char sexo[5]={'f','m','f','m','m'};
     int estado[5]={1,1,1,1,1};
 
     for(i=0;i<5;i++)
@@ -60,9 +60,10 @@ int buscarIndiceCliente(eCliente cliente[],int tam, int estado){
     if(cliente[i].estado==estado){
         indice=i;
         break;
-
     }
+
 }
+   return indice;
 }
 
 int altaCliente(eCliente cliente[], int tam,int estado,int contador){
@@ -72,24 +73,21 @@ int altaCliente(eCliente cliente[], int tam,int estado,int contador){
     guardarIndice = buscarIndiceCliente(cliente, tam, LIBRE);
 
     if(guardarIndice != -1){
+        cliente[guardarIndice].estado=estado;
         cliente[guardarIndice].idCliente=55+contador;
         getString("\nIngrese el nombre del cliente:",cliente[guardarIndice].nombre);
         getString("\nIngrese el apellido del cliente:",cliente[guardarIndice].apellido);
         getString("\nIngrese la localidad del cliente: ",cliente[guardarIndice].localidad);
         getString("\nIngrese el numero de teléfono",&cliente[guardarIndice].telefono);
-        cliente[guardarIndice].edad=getInt("Ingrese la edad del cliente:","Ingrese una edad valida!",0,150);
-        printf("\nIngrese el sexo del cliente: ");
-        fflush(stdin);
-        scanf("%c",&cliente[guardarIndice].sexo);
+        cliente[guardarIndice].edad=getInt("\nIngrese la edad del cliente:","Ingrese una edad valida!",0,150);
+        cliente[guardarIndice].sexo=getChar("\nIngrese el sexo del cliente: ");
+
         while(cliente[guardarIndice].sexo !='m'&& cliente[guardarIndice].sexo!='f'){
-            printf("\nIngrese un sexo correcto: ");
-            fflush(stdin);
-            scanf("%c",&cliente[guardarIndice].sexo);
-            cliente[guardarIndice].estado=estado;
+            cliente[guardarIndice].sexo=getChar("Ingrese un sexo correcto!!");
+    }
         return 1;
     }
-    return 0;
-    }
+     return 0;
     }
 
 int modificarCliente(eCliente cliente[], int tam,int estado){
@@ -104,18 +102,41 @@ int modificarCliente(eCliente cliente[], int tam,int estado){
             getString("\nIngrese el apellido del cliente:",cliente[i].apellido);
             getString("\nIngrese la localidad del cliente: ",cliente[i].localidad);
             getString("\nIngrese el numero de teléfono",&cliente[i].telefono);
-            cliente[i].edad=getInt("Ingrese la edad del cliente:","Ingrese una edad valida!",0,150);
-            printf("\nIngrese el sexo del cliente: ");
-            fflush(stdin);
-            scanf("%c",&cliente[i].sexo);
+            cliente[i].edad=getInt("\nIngrese la edad del cliente:","Ingrese una edad valida!",0,150);
+            cliente[i].sexo=getChar("\nIngrese el sexo del cliente: ");
+
             while(cliente[i].sexo !='m'&& cliente[i].sexo!='f'){
-                printf("\nIngrese un sexo correcto: ");
-                fflush(stdin);
-                scanf("%c",&cliente[i].sexo);
+                cliente[i].sexo=getChar("Ingrese un sexo correcto!!");
+            }
             cliente[i].estado=estado;
+            return 1;
         }
     }
-}
+    return 0;
 }
 
+void mostrarPromedioSexoClientes(eCliente cliente[], int tam,int estado){
+    int i;
+    int contadorHombres=0;
+    int contadorMujeres=0;
+    int contadorClientes=0;
+    float resultadoTotalMujeres;
+    float resultadoTotalHombres;
+    for(i=0;i<tam;i++){
+        if(cliente[i].sexo=='f' && cliente[i].estado == estado){
+            contadorMujeres++;
+            contadorClientes++;
+        }
+        if(cliente[i].sexo=='m' && cliente[i].estado == estado){
+            contadorHombres++;
+            contadorClientes++;
+        }
+    }
+
+    resultadoTotalHombres= ((float)contadorHombres/contadorClientes)*100;
+    resultadoTotalMujeres= ((float)contadorMujeres/contadorClientes)*100;
+    printf("\nEl promedio de hombres es: %.2f  y el promedio de mujeres es: %.2f ",resultadoTotalHombres,resultadoTotalMujeres);
+
+
+}
 

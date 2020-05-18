@@ -4,7 +4,6 @@
 #include <stdlib.h>
 
 typedef struct{
-    int idCliente;
     int contadorMascotas;
 }eMascotaCliente;
 
@@ -17,6 +16,8 @@ void initMascotaCliente(eMascotaCliente mascotaCliente[], eCliente cliente[],int
 void contadorMascotasPorCliente(eMascotaCliente mascotaCliente[],eCliente cliente[],int tamCliente,eMascotas mascota[],int tamMascota);
 void listarClientesMasUnaMascota(eMascotaCliente mascotaCliente[],eCliente cliente[],int tamCliente,eMascotas mascota[],int tamMascota);
 void ordenarClientesPorCantidadMascotas(eMascotaCliente mascotaCliente[],eCliente cliente[],int tamCliente,eMascotas mascota[],int tamMascota);
+void ordenarClientesPorCantidadMascotasYNombres(eMascotaCliente mascotaCliente[],eCliente cliente[],int tamCliente,eMascotas mascota[],int tamMascota);
+
 
 
 

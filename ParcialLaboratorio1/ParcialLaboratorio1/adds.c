@@ -8,7 +8,6 @@ void validarOperacion(char mensaje [],char mensajeError[], int devolucion){
         }
 }
 
-
 int getInt(char mensaje[],char mensajeError[],int piso, int techo){
     int entero;
     printf("%s",mensaje);
@@ -24,5 +23,13 @@ void getString(char mensaje[],char lugar[]){
     printf("%s",mensaje);
     fflush(stdin);
     gets(lugar);
+}
+
+char getChar(char mensaje[]){
+    char caracter;
+    printf("%s",mensaje);
+    fflush(stdin);
+    scanf("%c",&caracter);
+    return caracter;
 }
 

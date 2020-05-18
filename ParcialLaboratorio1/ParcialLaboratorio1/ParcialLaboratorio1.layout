@@ -4,80 +4,87 @@
 	<ActiveTarget name="Release" />
 	<File name="Clientes.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="559" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="4" />
-		</Folding>
-	</File>
-	<File name="adds.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
 			<Cursor1 position="19" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="2" />
-			<Collapse line="11" />
-			<Collapse line="22" />
-		</Folding>
-	</File>
-	<File name="Mascotas.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="551" topLine="0" />
-		</Cursor>
-		<Folding>
 			<Collapse line="4" />
 		</Folding>
 	</File>
-	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1459" topLine="63" />
-		</Cursor>
-	</File>
-	<File name="Mascotas_Clientes.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="637" topLine="0" />
+			<Cursor1 position="5117" topLine="83" />
 		</Cursor>
 	</File>
 	<File name="Clientes.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6" topLine="0" />
+			<Cursor1 position="4653" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="4" />
 			<Collapse line="28" />
 			<Collapse line="36" />
 			<Collapse line="54" />
-			<Collapse line="67" />
-			<Collapse line="94" />
+			<Collapse line="68" />
+			<Collapse line="92" />
+			<Collapse line="117" />
 		</Folding>
 	</File>
-	<File name="Mascotas.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="adds.c" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3565" topLine="0" />
+			<Cursor1 position="729" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="2" />
+			<Collapse line="10" />
+			<Collapse line="21" />
+		</Folding>
+	</File>
+	<File name="Mascotas.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="825" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="4" />
+		</Folding>
+	</File>
+	<File name="Mascotas.c" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3374" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="3" />
 			<Collapse line="29" />
 			<Collapse line="37" />
 			<Collapse line="51" />
-			<Collapse line="66" />
-			<Collapse line="105" />
+			<Collapse line="101" />
+			<Collapse line="119" />
+			<Collapse line="143" />
+			<Collapse line="159" />
 		</Folding>
+	</File>
+	<File name="Mascotas_Clientes.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="104" topLine="0" />
+		</Cursor>
 	</File>
 	<File name="adds.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="60" topLine="0" />
+			<Cursor1 position="283" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Mascotas_Clientes.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="Mascotas_Clientes.c" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5491" topLine="0" />
+			<Cursor1 position="7535" topLine="21" />
 		</Cursor>
 		<Folding>
 			<Collapse line="4" />
 			<Collapse line="32" />
 			<Collapse line="57" />
-			<Collapse line="102" />
+			<Collapse line="107" />
+			<Collapse line="129" />
+			<Collapse line="145" />
+			<Collapse line="154" />
+			<Collapse line="168" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>

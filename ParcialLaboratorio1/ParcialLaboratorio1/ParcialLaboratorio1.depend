@@ -1,39 +1,39 @@
 # depslib dependency file v1.0
-1589692741 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\clientes.c
+1589808790 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\clientes.c
 	"Clientes.h"
 
-1589750138 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\clientes.h
+1589806264 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\clientes.h
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 
-1589753108 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas.c
+1589808861 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas.c
 	"Mascotas.h"
 
-1589753259 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas.h
+1589767672 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas.h
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 
-1589761495 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\main.c
+1589839596 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Mascotas_Clientes.h"
 	"adds.h"
 
-1589761827 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas_clientes.h
+1589807656 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas_clientes.h
 	"Clientes.h"
 	"Mascotas.h"
 	<stdio.h>
 	<stdlib.h>
 
-1589762264 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas_clientes.c
+1589842023 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas_clientes.c
 	"Mascotas_Clientes.h"
 
-1589669359 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\adds.c
+1589808383 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\adds.c
 	"adds.h"
 
-1589669339 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\adds.h
+1589808252 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\adds.h
 	<string.h>
 	<stdio.h>
 	<stdlib.h>

@@ -32,7 +32,7 @@ int main()
 
         do{
         printf("\n\n\n1-Mostrar listado de clientes\n2-Mostrar Listado de mascotas \n3-Mostrar listado de clientes con sus mascotas:\n4-Alta mascota:\n5-Dar de baja a mascota:\n6-Mofificar mascota: \n7-Alta de clientes/duenios:\n8-Borrado de duenio en cascada:\n9-Mostrar por tipo de mascota:\n10-Modificar cliente o duenio\n11-Listar clientes con mas de una mascota\n12-Listar mascotas mayores de 3 anios\n13-Listar mascotas por un tipo particular\n14-Ordenar a los dueños por cantidad de mascotas y mostrar\n15-Ordenar a los dueños por cantidades de mascotas y por orden alfabetico\n16-Mostrar el promedio de edad entre las mascotas\n17-Mostrar promedio de edad entre las mascotas, por tipo\n18-El promedio que tengo entre varones y mujeres de mis clientes\n19-Salir");
-    	opcion=getInt("\nIngrese una opcion:","Ingrese una opcion valida",0,19);
+    	opcion=getInt("\nIngrese una opcion:","Ingrese una opcion valida!!!",0,19);
 
     	switch(opcion){
 
@@ -40,12 +40,10 @@ int main()
     	    system("cls");
             mostrarCliente(cliente, C, OCUPADO);
             break;
-
         case 2:
             system("cls");
             mostrarMascota(cliente,C,mascota,M,OCUPADO);
             break;
-
         case 3:
             system("cls");
             mostrarClientesMascotas(cliente,C,mascota,M,OCUPADO);
@@ -64,7 +62,7 @@ int main()
         case 6:
             system("cls");
              mostrarMascota(cliente,C,mascota,M,OCUPADO);
-             modificarMascota(mascota,M,OCUPADO);
+             validarOperacion("La modificacion fue realizada con exito","El id ingresado no existe, pruebe de nuevo!",modificarMascota(mascota,M,OCUPADO));
              break;
         case 7:
             system("cls");
@@ -74,7 +72,7 @@ int main()
         case 8:
              system("cls");
              mostrarCliente(cliente,C,OCUPADO);
-             validarOperacion("La baja fue correcta","No se pudo realizar la baja!",bajaClienteCascada(mascota,M,cliente,C,LIBRE));
+             validarOperacion("La baja fue correcta","No se pudo realizar la baja, id incorrecto!",bajaClienteCascada(mascota,M,cliente,C,LIBRE));
              break;
         case 9:
              system("cls");
@@ -84,15 +82,12 @@ int main()
         case 10:
              system("cls");
              mostrarCliente(cliente,C,OCUPADO);
-             validarOperacion("La modificacion fue realizada con exito!","La modificacion no se pudo completar",modificarCliente(cliente,C,OCUPADO));
+             validarOperacion("La modificacion fue realizada con exito!","No ingreso un ID valido",modificarCliente(cliente,C,OCUPADO));
              break;
         case 11:
             system("cls");
             initMascotaCliente(mascotaCliente,cliente,C);
             listarClientesMasUnaMascota(mascotaCliente,cliente,C,mascota,M);
-            break;
-
-
             break;
         case 12:
              system("cls");
@@ -109,12 +104,24 @@ int main()
             mostrarCliente(cliente,C,OCUPADO);
             break;
         case 15:
+            system("cls");
+            initMascotaCliente(mascotaCliente,cliente,C);
+            ordenarClientesPorCantidadMascotasYNombres(mascotaCliente,cliente,C,mascota,M);
+            mostrarCliente(cliente,C,OCUPADO);
+            break;
         case 16:
+            system("cls");
+            mostrarPromedioDeEdadMascotas(mascota,M,OCUPADO);
+            break;
         case 17:
+            system("cls");
+            mostrarPromedioPorTipo(mascota,M,OCUPADO);
+            break;
         case 18:
+            mostrarPromedioSexoClientes(cliente,C,OCUPADO);
+            break;
         case 19:
-            printf("Gracias por utilizar el menu!!");
-
+            printf("\nGracias por utilizar el menu!!");
     	}
         }while(opcion!=19);
 }

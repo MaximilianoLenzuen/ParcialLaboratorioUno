@@ -22,7 +22,7 @@ void mostrarClientesMascotas(eCliente cliente[],int tamCliente,eMascotas mascota
 
             for(j=0;j<tamMascota;j++){
                 if(cliente[i].estado==estado && cliente[i].idCliente==mascota[j].idDuenio){
-                    printf("%10s",mascota[j].tipo);
+                    printf("%10s: %10s",mascota[j].tipo,mascota[j].nombre);
                 }
             }
         }
@@ -61,20 +61,25 @@ int altaMascota(eMascotas mascota[],int tamMascota,eCliente cliente[],int tamCli
     int i;
     int j;
     int aux=0;
+
     guardarIndice = buscarIndiceMascota(mascota, tamMascota,LIBRE);
 
     if(guardarIndice != -1){
         mascota[guardarIndice].idMascota=31+contador;
-        printf("\nIngrese el ID de algun nuevo duenio disponible: ");
-        scanf("%d",&mascota[guardarIndice].idDuenio);
-        while(aux!=1){
-        for(j=0;j<tamCliente;j++){
-            if(mascota[guardarIndice].idDuenio==cliente[j].idCliente){
-                aux=1;
-                break;
+
+            while(aux!=1)
+            {
+            printf("\nIngrese un id de duenio valido: ");
+            scanf("%d",&mascota[guardarIndice].idDuenio);
+                for(j=0;j<tamCliente;j++){
+                    if(mascota[guardarIndice].idDuenio==cliente[j].idCliente){
+                        aux=1;
+                        break;
+                    }
+                }
+
+
             }
-        }
-        }
 
         getString("\nIngrese el nombre de la mascota:",mascota[guardarIndice].nombre);
         getString("\nIngrese el tipo de la mascota:",mascota[guardarIndice].tipo);
@@ -82,7 +87,7 @@ int altaMascota(eMascotas mascota[],int tamMascota,eCliente cliente[],int tamCli
             getString("\nIngrese el tipo correcto [Perro, Gato, Raro] :",mascota[guardarIndice].tipo);
         }
         getString("\nIngrese la raza de la mascota:",mascota[guardarIndice].raza);
-        mascota[guardarIndice].edad=getInt("Ingrese la edad de la mascota:","ingrese una edad valida!!",0,100);
+        mascota[guardarIndice].edad=getInt("\nIngrese la edad de la mascota:","ingrese una edad valida!!",0,100);
         printf("\nIngrese peso la mascota: ");
         scanf("%f",&mascota[guardarIndice].peso);
         mascota[guardarIndice].estado=estado;
@@ -143,7 +148,6 @@ void initMascotaCliente(eMascotaCliente mascotaCliente[], eCliente cliente[],int
     for(i=0;i<tamCliente;i++){
         if(cliente[i].estado==OCUPADO){
         mascotaCliente[i].contadorMascotas=0;
-        mascotaCliente[i].idCliente = cliente[i].idCliente;
     }
     }
     }
@@ -180,6 +184,7 @@ void ordenarClientesPorCantidadMascotas(eMascotaCliente mascotaCliente[],eClient
     int i;
     int j;
     eCliente aux;
+    eMascotaCliente auxUno;
     contadorMascotasPorCliente(mascotaCliente,cliente,tamCliente,mascota,tamMascota);
     for(i=0; i<tamCliente-1; i++)
     {
@@ -190,9 +195,51 @@ void ordenarClientesPorCantidadMascotas(eMascotaCliente mascotaCliente[],eClient
                 aux=cliente[i];
                 cliente[i]=cliente[j];
                 cliente[j]=aux;
+
+                auxUno=mascotaCliente[i];
+                mascotaCliente[i]=mascotaCliente[j];
+                mascotaCliente[j]=auxUno;
+
             }
 
         }
     }
 
+}
+
+void ordenarClientesPorCantidadMascotasYNombres(eMascotaCliente mascotaCliente[],eCliente cliente[],int tamCliente,eMascotas mascota[],int tamMascota){
+    int i;
+    int j;
+    eMascotaCliente auxUno;
+    eCliente aux;
+
+    contadorMascotasPorCliente(mascotaCliente,cliente,tamCliente,mascota,tamMascota);
+    for(i=0; i<tamCliente-1; i++)
+    {
+        for(j=i+1; j<tamCliente; j++)
+        {
+            if(mascotaCliente[i].contadorMascotas>mascotaCliente[j].contadorMascotas)
+            {
+                aux=cliente[i];
+                cliente[i]=cliente[j];
+                cliente[j]=aux;
+
+
+                auxUno=mascotaCliente[i];
+                mascotaCliente[i]=mascotaCliente[j];
+                mascotaCliente[j]=auxUno;
+            }
+            else
+            {
+                if(mascotaCliente[i].contadorMascotas==mascotaCliente[j].contadorMascotas && strcmpi(cliente[i].nombre,cliente[j].nombre)>0)
+                {
+                    aux=cliente[i];
+                    cliente[i]=cliente[j];
+                    cliente[j]=aux;
+                }
+
+            }
+
+        }
+    }
 }

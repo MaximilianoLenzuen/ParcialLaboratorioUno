@@ -22,3 +22,5 @@ int modificarMascota(eMascotas mascota[], int tam,int estado);
 void ordenarMascotas(eMascotas mascota[],int tam);
 void listarMascotasPorTipo(eMascotas mascota[],int tam,int estado);
 void listarPromedioEdadMascotas(eMascotas mascota[],int tam,int estado);
+void mostrarPromedioDeEdadMascotas(eMascotas mascota[],int tam,int estado);
+void mostrarPromedioPorTipo(eMascotas mascota[],int tam,int estado);

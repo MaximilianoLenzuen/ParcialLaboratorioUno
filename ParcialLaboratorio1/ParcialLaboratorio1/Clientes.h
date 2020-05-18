@@ -20,5 +20,5 @@ void mostrarCliente(eCliente cliente[], int tam, int estado);
 int buscarIndiceCliente(eCliente cliente[],int tam, int estado);
 int altaCliente(eCliente cliente[], int tam,int estado,int contador);
 int modificarCliente(eCliente cliente[], int tam,int estado);
-
+void mostrarPromedioSexoClientes(eCliente cliente[], int tam,int estado);
 
