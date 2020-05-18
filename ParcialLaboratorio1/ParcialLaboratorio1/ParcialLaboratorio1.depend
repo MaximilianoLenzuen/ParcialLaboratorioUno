@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1589692741 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\clientes.c
+	"Clientes.h"
+
+1589750138 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\clientes.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1589753108 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas.c
+	"Mascotas.h"
+
+1589753259 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1589761495 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Mascotas_Clientes.h"
+	"adds.h"
+
+1589761827 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas_clientes.h
+	"Clientes.h"
+	"Mascotas.h"
+	<stdio.h>
+	<stdlib.h>
+
+1589762264 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\mascotas_clientes.c
+	"Mascotas_Clientes.h"
+
+1589669359 source:c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\adds.c
+	"adds.h"
+
+1589669339 c:\users\maxi\desktop\parciallaboratorio1\parciallaboratorio1\adds.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
